@@ -95,5 +95,7 @@ class EPRobot {
     fill(255, 0, 213);
     triangle(x + (ax + aWidth)*horizontalScale, y + (ty + aWidth)*verticalScale, x + (tx + tWidth/4)*horizontalScale, y + ty*verticalScale, x + tx*horizontalScale,  y + ty*verticalScale); //left
     triangle(x + (tx + tWidth)*horizontalScale, y + ty*verticalScale, x + (tx + tWidth)*horizontalScale, y + ay*verticalScale, x + (tx + tWidth - tWidth/4)*horizontalScale,  y + ty*verticalScale); //right
-   }
+    fill(0);
+    point(100,500);
+ }
 }
