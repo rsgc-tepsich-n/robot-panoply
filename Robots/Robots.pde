@@ -21,12 +21,31 @@ void draw() {
     //make Buzz speech bubble
     fill(255);
     noStroke();
-    ellipse(buzzX + 200, buzzY + -50, 100 ,100 );
+    ellipse(buzzX + 200, buzzY + -50, 100, 100 );
 
     //Make Buzz Speech show up
     fill(0);
     textAlign(CENTER);
     textSize(16);
     text("Good morning Woody", buzzX + 150, buzzY + -90, 100, 100);
+
+
+
+    //Place "woody" in bottum left corner
+    int woodyX = 400;
+    int woodyY = 260;
+    KCRobot woodyRobot = new KCRobot();
+    woodyRobot.drawAt (woodyX, woodyY, 1.0, 1.0);
+
+    //make Buzz speech bubble
+    fill(255);
+    noStroke();
+    ellipse(woodyX + 130, woodyY + 90, 100, 100 );
+
+    //Make Woody Speech show up
+    fill(0);
+    textAlign(CENTER);
+    textSize(16);
+    text("Good morning Buzz.", woodyX + 80, woodyY + 50, 100, 100);
   }
 }
