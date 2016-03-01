@@ -11,7 +11,8 @@ void draw() {
 
   //make a decision
   if (scene == 1) {
-
+    fill(255);
+    text("SCENE ONE", 500, 650);
     //Place "Buzz" in bottum left corner
     int buzzX = 100;
     int buzzY = 400;
@@ -21,13 +22,13 @@ void draw() {
     //make Buzz speech bubble
     fill(255);
     noStroke();
-    ellipse(buzzX + 200, buzzY + -50, 100, 100 );
+    ellipse(buzzX + 200, buzzY + -80, 150, 150 );
 
     //Make Buzz Speech show up
     fill(0);
     textAlign(CENTER);
     textSize(16);
-    text("Good morning Woody", buzzX + 150, buzzY + -90, 100, 100);
+    text("Andy is all grown up and going to college", buzzX + 150, buzzY + -120, 100, 100);
 
     //Place "woody" in bottum right corner
     int woodyX = 400;
@@ -44,7 +45,7 @@ void draw() {
     fill(0);
     textAlign(CENTER);
     textSize(16);
-    text("Good morning Buzz.", woodyX + 80, woodyY + 50, 100, 100);
+    text("We are useless now", woodyX + 80, woodyY + 60, 100, 100);
   } else if (scene == 2) {
     text("SCENE TWO", 500, 650);
 
@@ -81,19 +82,23 @@ void draw() {
     fill(0);
     textAlign(CENTER);
     textSize(16);
-    text("I hear Andy coming, HIDE!", woodyX + 80, woodyY + 60, 100, 100);
-
-    //draw door top left corner
+    text("I dont like it hear", woodyX + 80, woodyY + 70, 100, 100);
+    
     fill(255);
-    rect(10, 10, 200, 300);
+    textAlign(CENTER);
+    textSize(16);
+    text("SUNNYSIDE DAYCARE", woodyX + 80, woodyY + 70, 100, 100);
+   
 
-    //draw door knob (black)
-    fill(0);
-    ellipse(180, 180, 30, 30);
-
-    //draw door knob (white)
-    fill(255);
-    ellipse(180, 180, 10, 10);
+  } else if (scene == 3) {
+    text("SCENE THREE", 500, 650);
+     
+    //Place "Andy" in the middle of page
+    int andyX = 200;
+    int andyY = 10;
+    JSSRobot andyRobot = new JSSRobot();
+    andyRobot.drawAt (andyX, andyY, 1.0, 1.0);
+    
   }
 }
 
@@ -102,4 +107,4 @@ void keyPressed () {
 
   //advance to the next scene
   scene += 1;
-}
+} 
