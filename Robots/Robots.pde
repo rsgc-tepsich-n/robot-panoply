@@ -47,7 +47,6 @@ void draw() {
     textSize(16);
     text("Andy is all grown up and going to college", buzzX + 150, buzzY + -120, 100, 100);
 
-
     //Place "woody" in bottum right corner
     int woodyX = 400;
     int woodyY = 260;
@@ -108,16 +107,25 @@ void draw() {
     textAlign(CENTER);
     textSize(16);
     text("SUNNYSIDE DAYCARE", 100, 100, 100, 100);
+
+    //make white planet
+    fill(255);
+    ellipse(80, 50, 100, 100);
+
+    //make ring around planet
+    fill(0);
+    ellipse(80, 50, 150, 20);
   } else if (scene == 3) {
+    textSize(16);
     text("SCENE THREE", 500, 650);
 
-   //Make the green yard
+    //Make the green yard
     fill(0, 150, 0);  
     rect(0, 320, 1000, 300);
-    
+
     //make Andy turn white
-    fill(1000,1000,1000,1000);
-    
+    fill(1000, 1000, 1000, 1000);
+
     //Place Andy in the middle of page
     int andyX = 300;
     int andyY = 80;
@@ -151,7 +159,7 @@ void draw() {
     textAlign(CENTER);
     textSize(16);
     text("Thanks Andy", girlX + 290, girlY + 130, 100, 100);
-    
+
     //Place "Buzz" on the yard
     int buzzX = 620;
     int buzzY = 480;
@@ -174,13 +182,31 @@ void draw() {
     int woodyY = 450;
     KCRobot woodyRobot = new KCRobot();
     woodyRobot.drawAt (woodyX, woodyY, .2, .2);
-    
-    //make house in background
-    
-    
-    
-    
-    
+
+    //make house in background (rect)
+    fill(0);
+    rect(40, 120, 210, 160);
+
+    //make house in background (triangle)
+    fill(255);
+    triangle(1, 150, 150, 10, 290, 150);
+
+    //make door for house
+    fill(255);
+    rect(180, 225, 30, 55);
+
+    //make door knob
+    fill(0);
+    ellipse(200, 255, 10, 10);
+
+    //make walking steps
+    fill(0);
+    rect(160, 280, 55, 55);
+    rect(80, 280, 55, 55);
+  } else if (scene == 4) {
+    textAlign(CENTER);
+    textSize(50);
+    text("TOY STORY", 500, 650);
   }
 }
 
