@@ -11,13 +11,30 @@ void draw() {
 
   //make a decision
   if (scene == 1) {
-    fill(255);
+    fill(0);
     text("SCENE ONE", 500, 650);
     //Place "Buzz" in bottum left corner
     int buzzX = 100;
     int buzzY = 400;
     TMRobots buzzRobots = new TMRobots();
     buzzRobots.drawAt (buzzX, buzzY, 1.0, 1.0);
+
+    //make window
+    fill(255);
+    rect(380, 10, 160, 160);
+
+    //sky
+    fill(0, 0, 1500); 
+    rect(385, 15, 70, 70); 
+
+    fill(0, 0, 1500); 
+    rect(385, 95, 70, 70); 
+
+    fill(0, 0, 1500); 
+    rect(465, 15, 70, 70);
+
+    fill(0, 0, 1500); 
+    rect(465, 95, 70, 70); 
 
     //make Buzz speech bubble
     fill(255);
@@ -30,13 +47,14 @@ void draw() {
     textSize(16);
     text("Andy is all grown up and going to college", buzzX + 150, buzzY + -120, 100, 100);
 
+
     //Place "woody" in bottum right corner
     int woodyX = 400;
     int woodyY = 260;
     KCRobot woodyRobot = new KCRobot();
     woodyRobot.drawAt (woodyX, woodyY, 1.0, 1.0);
 
-    //make Buzz speech bubble
+    //make Woody speech bubble
     fill(255);
     noStroke();
     ellipse(woodyX + 130, woodyY + 90, 100, 100 );
@@ -83,21 +101,85 @@ void draw() {
     textAlign(CENTER);
     textSize(16);
     text("I dont like it hear", woodyX + 80, woodyY + 70, 100, 100);
-    
-    fill(255);
+
+    //Make Day Care sign show up
+    noStroke();
+    fill(0);
     textAlign(CENTER);
     textSize(16);
-    text("SUNNYSIDE DAYCARE", woodyX + 80, woodyY + 70, 100, 100);
-   
-
+    text("SUNNYSIDE DAYCARE", 100, 100, 100, 100);
   } else if (scene == 3) {
     text("SCENE THREE", 500, 650);
-     
-    //Place "Andy" in the middle of page
-    int andyX = 200;
-    int andyY = 10;
+
+   //Make the green yard
+    fill(0, 150, 0);  
+    rect(0, 320, 1000, 300);
+    
+    //make Andy turn white
+    fill(1000,1000,1000,1000);
+    
+    //Place Andy in the middle of page
+    int andyX = 300;
+    int andyY = 80;
     JSSRobot andyRobot = new JSSRobot();
-    andyRobot.drawAt (andyX, andyY, 1.0, 1.0);
+    andyRobot.drawAt (andyX, andyY, .70, .70);
+
+    //make Andy speech bubble
+    fill(255);
+    noStroke();
+    ellipse(andyX + 150, andyY + 30, 120, 120 );
+
+    //Make Andy Speech show up
+    fill(0);
+    textAlign(CENTER);
+    textSize(16);
+    text("You can have my favorite toys", andyX + 100, andyY + -10, 100, 100);
+
+    //Place girl in the middle of page
+    int girlX = 500;
+    int girlY = 200;
+    EPRobot2 girlRobot = new EPRobot2();
+    girlRobot.drawAt2 (girlX, girlY, .5, .5);
+
+    //make girl speech bubble
+    fill(255);
+    noStroke();
+    ellipse(girlX + 340, girlY + 160, 100, 100 );
+
+    //Make girl Speech show up
+    fill(0);
+    textAlign(CENTER);
+    textSize(16);
+    text("Thanks Andy", girlX + 290, girlY + 130, 100, 100);
+    
+    //Place "Buzz" on the yard
+    int buzzX = 620;
+    int buzzY = 480;
+    TMRobots buzzRobots = new TMRobots();
+    buzzRobots.drawAt (buzzX, buzzY, .2, .2);
+
+    //make Buzz speech bubble
+    fill(255);
+    noStroke();
+    ellipse(buzzX  -10, buzzY -35, 70, 70 );
+
+    //Make Buzz Speech show up
+    fill(0);
+    textAlign(CENTER);
+    textSize(10);
+    text("To Infinity And Beyond", buzzX -35, buzzY + -55, 50, 50);
+
+    //Place "woody" on the yard
+    int woodyX = 500;
+    int woodyY = 450;
+    KCRobot woodyRobot = new KCRobot();
+    woodyRobot.drawAt (woodyX, woodyY, .2, .2);
+    
+    //make house in background
+    
+    
+    
+    
     
   }
 }
