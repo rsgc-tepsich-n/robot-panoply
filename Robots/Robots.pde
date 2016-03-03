@@ -205,9 +205,16 @@ void draw() {
     rect(80, 280, 55, 55);
   } else if (scene == 4) {
     textAlign(CENTER);
-    textSize(50);
-    text("TOY STORY", 500, 650);
+    textSize(64);
+    text("TOY STORY", 500, 350);
+
+    textSize(32);
+    text("Nicholas Tepsich", 500, 400);
   }
+  if (frameCount % 180 == 0) {
+    scene +=1;
+  }
+  saveFrame("Nick-movie-#####.png");
 }
 
 //this runs when any key on the keyboard is pressed
